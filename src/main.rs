@@ -5,6 +5,10 @@ use pyo3::types::PyDict;
 use pyo3::types::IntoPyDict;
 
 fn main() -> PyResult<()> {
+    let mut qubit = Qubit::new(); // Создаем кубит в состоянии |0⟩.
+println!("Исходное состояние кубита: |0⟩ = {}, |1⟩ = {}", qubit.state_zero, qubit.state_one);
+qubit.hadamard(); // Применяем операцию Адамара к кубиту.
+println!("Состояние кубита после операции Адамара: |0⟩ = {}, |1⟩ = {}", qubit.state_zero, qubit.state_one);
 
     Python::with_gil(|py| {
 

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Quantum Wasm Example</title>
+<script type="module">
+import init, { create_and_measure_qubit } from './pkg/wasm_quantum_example.js';
+async function run() {
+await init();
+alert(create_and_measure_qubit());
+}
+</script>
+</head>
+<body onload="run()">
+<h1>Wasm и Rust</h1>
+</body>
+</html>
